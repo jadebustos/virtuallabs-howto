@@ -1,0 +1,9 @@
+== Virtual Box
+
+Virtual Box es un software de virtualización gratuito que se puede descargar y utilizar en varios sistemas operativos:
+
+* Windows.
+* Mac OS X.
+* Linux.
+
+NOTE: En Linux se dispone de soporte nativo para virtualización, por lo tanto abordaremos la creación de máquinas virtuales en Linux con KVM y no con Virtual Box.
