@@ -1,0 +1,27 @@
+= Creación de laboratorios virtuales
+:docinfo: shared
+:author: José Ángel de Bustos Pérez
+:revnumber: v1.0
+:data-uri:
+:title: Creación de laboratorios virtuales
+:toc: left
+:toclevels: 2
+:sectanchors:
+:sectlinks:
+:sectnums:
+:imagesdir: ./images
+
+toc::[]
+
+== Introducción
+
+Hoy en día se encuentra a la orden del día la creación de máquinas virtuales para poder disponer de varios entornos, para pruebas, laboratorios etc
+
+Se explicará como crear máquinas virtuales en diferentes entornos:app-name: 
+
+* Con Virtual Box en Windows o Mac OS X.
+* Con KVM en Linux.
+
+include::virtualbox.adoc[]
+
+include::kvm.adoc[]

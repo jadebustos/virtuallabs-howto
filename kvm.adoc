@@ -1,0 +1,3 @@
+== KVM
+
+Linux incluye soporte nativo para virtualización con lo cual no es necesario instalar software de terceras partes para la creación de máquinas virtuales. Bastará con utilizar las funcionalidades nativas de Linux.
