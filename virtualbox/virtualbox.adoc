@@ -7,3 +7,7 @@ Virtual Box es un software de virtualización gratuito que se puede descargar y 
 * Linux.
 
 NOTE: En Linux se dispone de soporte nativo para virtualización, por lo tanto abordaremos la creación de máquinas virtuales en Linux con KVM y no con Virtual Box.
+
+=== Instalación
+
+Virtual Box se puede descargar desde su https://www.virtualbox.org/[página web]. Descargaremos la versión para nuestro sistema operativo y realizamos la instalación por defecto.
