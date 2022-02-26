@@ -10,7 +10,6 @@
 :sectlinks:
 :sectnums:
 :imagesdir: ./images
-:icons: image
 
 toc::[]
 
