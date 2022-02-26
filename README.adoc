@@ -9,7 +9,7 @@
 :sectnums:
 :imagesdir: ./images
 :icons: image
-:iconsdir: icons
+:iconsdir: ./images/icons
 :author: José Ángel de Bustos Pérez
 :revnumber: v1.0
 
