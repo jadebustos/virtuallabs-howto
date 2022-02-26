@@ -11,6 +11,7 @@
 :sectnums:
 :imagesdir: ./images
 :icons: font
+:iconsdir: icons
 
 toc::[]
 
