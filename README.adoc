@@ -1,7 +1,5 @@
 = Creación de laboratorios virtuales
 :docinfo: shared
-:author: José Ángel de Bustos Pérez
-:revnumber: v1.0
 :data-uri:
 :title: Creación de laboratorios virtuales
 :toc: left
@@ -12,6 +10,8 @@
 :imagesdir: ./images
 :icons: image
 :iconsdir: icons
+:author: José Ángel de Bustos Pérez
+:revnumber: v1.0
 
 toc::[]
 
