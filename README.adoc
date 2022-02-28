@@ -10,7 +10,6 @@
 :imagesdir: ./images
 :icons: image
 :iconsdir: ./images/icons
-:author: José Ángel de Bustos Pérez
 :revnumber: v1.0
 
 toc::[]
@@ -23,6 +22,10 @@ Se explicará como crear máquinas virtuales en diferentes entornos:app-name:
 
 * Con Virtual Box en Windows o Mac OS X.
 * Con KVM en Linux.
+
+En esta guía se utilizará CentOS Stream 8 para ilustrar como crear y desplegar una máquina virtual.
+
+NOTE: En esta guía se explicará como crear máquinas virtuales de forma sencilla pero no se entrará a explicar de forma detallada las diferentes configuraciones que se pueden realizar. 
 
 include::virtualbox/virtualbox.adoc[]
 
