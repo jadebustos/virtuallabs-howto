@@ -26,3 +26,42 @@ Descargaremos la iso de 10 GB que contendrá toda la distribución.
 Abrimos VirtualBox:
 
 image::virtualbox/01-virtualbox.png[VirtualBox Install]
+
+Para crear una máquina virtual pinchamos en el icono **Nueva**:app-name: 
+
+image::virtualbox/02-virtualbox.png[VirtualBox Install]
+
+Configuramos los siguientes parámetros:app-name: 
+
+* Nombre de la máquina.
+* Tipo de máquina que vamos a crear. Configuraremos la familia del Sistema Operativo, en este caso Linux.
+* Versión del Sistema Operativo. Dado que no existe **CentOS** como versión configuraremos **Red Hat** ya que CentOS es de la familia de distribuciones basadas en Red Hat Enterprise Linux.
+* Aunque no es necesario podemos cambiar la carpeta de la máquina virtual donde se creará la máquina virtual.
+
+image::virtualbox/03-virtualbox.png[VirtualBox Install]
+
+A continuación configuramos la memoria que le queremos asignar a la máquina virtual. Dependiendo de la memoria que tenga la máquina en la que hemos instalado VirtualBox podremos asignar mas o menos memoria a la máquina virtual:app-name:
+
+image::virtualbox/04-virtualbox.png[VirtualBox Install]
+
+Creamos un disco duro donde realizaremos la instalación:
+
+image::virtualbox/05-virtualbox.png[VirtualBox Install]
+
+Seleccionamos el formato del disco duro virtual. El disco duro virtual será un fichero en el que se escribirán los datos de la máquina virtual:
+
+image::virtualbox/06-virtualbox.png[VirtualBox Install]
+
+Lo configuraremos para que crezca dinámicamente. De esta forma, si creamos una máquina virtual con un disco de 16 GB en lugar de crear un fichero de 16 GB y ocupar todo el espacio se creará un fichero más pequeño que irá creciendo según haga falta hasta los 16 GB que es el tamaño máximo de la máquina virtual:
+
+image::virtualbox/07-virtualbox.png[VirtualBox Install]
+
+Configuramos el tamaño de disco duro virtual que utilizará la máquina virtual:
+
+image::virtualbox/08-virtualbox.png[VirtualBox Install]
+
+Ya tenemos la máquina virtual creada:
+
+image::virtualbox/09-virtualbox.png[VirtualBox Install]
+
+Esta máquina virtual está vacia, no tiene un sistema operativo instalado, por lo tanto tendremos que instalarla.
