@@ -30,3 +30,5 @@ NOTE: En esta guía se explicará como crear máquinas virtuales de forma sencil
 include::virtualbox/virtualbox.adoc[]
 
 include::kvm/kvm.adoc[]
+
+include::centos/centos.adoc[]

@@ -1,4 +1,4 @@
-== Virtual Box
+== VirtualBox
 
 Virtual Box es un software de virtualización gratuito que se puede descargar y utilizar en varios sistemas operativos:
 
@@ -100,3 +100,22 @@ Ahora ya tenemos configurada la red de la máquina virtual y podemos comprobarlo
 
 image::virtualbox/05-network.png[VirtualBox Network]
 
+=== Instalación de la máquina virtual
+
+Ahora que tenemos configurada la máquina virtual podemos proceder a instalarla.
+
+El proceso de instalación es identico al de una máquina física. 
+
+En las máquinas físicas necesitaremos introducir el DVD de instalación en la unidad de DVD o bien utilizar un USB de instalación.
+
+En configuración vamos a la sección de almacenamiento:app-name:
+
+image::virtualbox/01-cdrom.png[VirtualBox Network]
+
+En la unidad virtual de DVD pinchamos en ella:
+
+image::virtualbox/02-cdrom.png[VirtualBox Network]
+
+Le asignamos la imagen ISO que nos hemos descargado:
+
+image::virtualbox/03-cdrom.png[VirtualBox Network]
