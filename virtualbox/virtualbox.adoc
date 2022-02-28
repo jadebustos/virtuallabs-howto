@@ -6,11 +6,13 @@ Virtual Box es un software de virtualización gratuito que se puede descargar y 
 * Mac OS X.
 * Linux.
 
-NOTE: En Linux se dispone de soporte nativo para virtualización, por lo tanto abordaremos la creación de máquinas virtuales en Linux con KVM y no con Virtual Box.
+NOTE: En Linux se dispone de soporte nativo para virtualización, por lo tanto abordaremos la creación de máquinas virtuales en Linux con KVM y no con VirtualBox.
 
 === Instalación
 
 Virtual Box se puede descargar desde su https://www.virtualbox.org/[página web]. Descargaremos la versión para nuestro sistema operativo y realizamos la instalación por defecto.
+
+NOTE: Describiremos el proceso de instalación en Mac OS X, siendo los pasos a seguir iguales para otros sistemas operativos.
 
 === Creación de una máquina virtual
 
