@@ -65,3 +65,38 @@ Ya tenemos la máquina virtual creada:
 image::virtualbox/09-virtualbox.png[VirtualBox Install]
 
 Esta máquina virtual está vacia, no tiene un sistema operativo instalado, por lo tanto tendremos que instalarla.
+
+=== Configuración de red
+
+VirtualBox puede utilizar diferentes configuraciones de red. Cada tipo de configuración permitirá un tipo de acceso a la red.
+
+No explicaremos los tipos posibles de configuraciones posibles.
+
+Configuraremos la red de tal forma que la máquina virtual tenga asignada una dirección ip en la misma red que la máquina anfitriona, es decir en tú red local.
+
+Con esta configuración será posible conectarse por red a la máquina virtual y la máquina virtual podrá acceder a distintos recursos de red.
+
+Si nos fijamos en la máquina virtual que hemos creado podremos ver que la configuración de red que tiene es NAT:
+
+image::virtualbox/01-network.png[VirtualBox Network]
+
+En configuración accedemos a la configuración de la máquina virtual:
+
+image::virtualbox/02-network.png[VirtualBox Network]
+
+Accedemos a la configuración de la máquina virtual:
+
+image::virtualbox/03-network.png[VirtualBox Network]
+
+Si vamos al apartado de red podremos configurar la red:
+
+image::virtualbox/04-network.png[VirtualBox Network]
+
+* Si hemos seguido las instrucciones la máquina virtual sólo tendrá una tarjeta de red.
+* La conectamos a un **adaptador puente**.
+* En nombre seleccionaremos el interface de red de la máquina donde hemos instalado VirtualBox que se encuentrá conectado a la red. De esta formá la máquina virtual utilizará el mismo adaptador para conectarse a la red.
+
+Ahora ya tenemos configurada la red de la máquina virtual y podemos comprobarlo:
+
+image::virtualbox/05-network.png[VirtualBox Network]
+
