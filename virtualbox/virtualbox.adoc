@@ -16,7 +16,7 @@ Virtual Box se puede descargar desde su https://www.virtualbox.org/[página web]
 
 Para crear una máquina virtual deberemos disponer de una imagen ISO para la instalación.
 
-Para ello descargaremos una ISO de [CentOS Stream 8](https://www.centos.org/download/) para la arquitectura de nuestro procesador, [x86_64](http://isoredirect.centos.org/centos/8-stream/isos/x86_64/). Disponemos de varias imágenes: 
+Para ello descargaremos una ISO de https://www.centos.org/download/[CentOS Stream 8] para la arquitectura de nuestro procesador, http://isoredirect.centos.org/centos/8-stream/isos/x86_64/[x86_64]. Disponemos de varias imágenes: 
 
 * Una boot iso de poco más de 800 MB.
 * Una ISO de unos 10 GB.
