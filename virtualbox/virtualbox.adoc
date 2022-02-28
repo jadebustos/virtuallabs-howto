@@ -108,7 +108,7 @@ El proceso de instalación es identico al de una máquina física.
 
 En las máquinas físicas necesitaremos introducir el DVD de instalación en la unidad de DVD o bien utilizar un USB de instalación.
 
-En configuración vamos a la sección de almacenamiento:app-name:
+En configuración vamos a la sección de almacenamiento:
 
 image::virtualbox/01-cdrom.png[VirtualBox Network]
 
