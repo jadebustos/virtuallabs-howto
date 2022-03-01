@@ -29,11 +29,11 @@ Abrimos VirtualBox:
 
 image::virtualbox/01-virtualbox.png[VirtualBox Install]
 
-Para crear una máquina virtual pinchamos en el icono **Nueva**:app-name: 
+Para crear una máquina virtual pinchamos en el icono **Nueva**:
 
 image::virtualbox/02-virtualbox.png[VirtualBox Install]
 
-Configuramos los siguientes parámetros:app-name: 
+Configuramos los siguientes parámetros:
 
 * Nombre de la máquina.
 * Tipo de máquina que vamos a crear. Configuraremos la familia del Sistema Operativo, en este caso Linux.
@@ -42,7 +42,7 @@ Configuramos los siguientes parámetros:app-name:
 
 image::virtualbox/03-virtualbox.png[VirtualBox Install]
 
-A continuación configuramos la memoria que le queremos asignar a la máquina virtual. Dependiendo de la memoria que tenga la máquina en la que hemos instalado VirtualBox podremos asignar mas o menos memoria a la máquina virtual:app-name:
+A continuación configuramos la memoria que le queremos asignar a la máquina virtual. Dependiendo de la memoria que tenga la máquina en la que hemos instalado VirtualBox podremos asignar mas o menos memoria a la máquina virtual:
 
 image::virtualbox/04-virtualbox.png[VirtualBox Install]
 
