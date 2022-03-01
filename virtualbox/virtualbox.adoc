@@ -121,3 +121,33 @@ image::virtualbox/02-cdrom.png[VirtualBox Network]
 Le asignamos la imagen ISO que nos hemos descargado:
 
 image::virtualbox/03-cdrom.png[VirtualBox Network]
+
+Una vez asignada:
+
+image::virtualbox/04-cdrom.png[VirtualBox Network]
+
+En las propiedades de la máquina virtual también podremos ver si la iso se encuentra mapeada:
+
+image::virtualbox/05-cdrom.png[VirtualBox Network]
+
+En estas condiciones ya podemos proceder a instalar la máquina virtual. Para ello la deberemos arrancar haciendo click en **Iniciar**:
+
+image::virtualbox/01-virtualbox-install.png[VirtualBox Linux Installation]
+
+La máquina virtual arrancará y podremos proceder a instalarla igual que haríamos sobre una máquina física, solo que utilizando la consola virtual que nos ofrece VirtualBox:
+
+image::virtualbox/02-virtualbox-install.png[VirtualBox Linux Installation]
+
+Una ver terminada la instalación y reniciada la máquina podemos iniciar sesión en la consola virtual de VirtualBox:
+
+image::virtualbox/03-virtualbox-install.png[VirtualBox Linux Installation]
+
+Si hemos configurado adecuadamente la red la máquina virtual tendrá asignada una dirección por DHCP (asumiendo que tenemos un servidor de DHCP en la red). En este caso y dado que la dirección assignada a la la máquina virtual es **192.168.1.31** podremos conectarnos por SSH a la máquina:
+
+image::virtualbox/04-virtualbox-install.png[VirtualBox Linux Installation]
+
+Cuando trabajemos utilizando la consola de VirtualBox el cursor se encontrará ``encerrado'' en la cosola y podrá ser utilizado fuera de la consola. Para liberarlo, en Mac OS X, bastará con presionar la tecla de comando izquierda, tal y como se indica en la parte inferior derecha de la consola:
+
+image::virtualbox/01-virtualbox-cursor.png[VirtualBox Cursor]
+
+En el apartado <<centos_installation, Instalación de CentOS>> se describe como realizar una instalación simple de **CentOS**.

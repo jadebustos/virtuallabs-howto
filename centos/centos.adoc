@@ -1,2 +1,2 @@
-== Instalación de CentOS
+== Instalación de CentOS [[centos_installation]]
 
