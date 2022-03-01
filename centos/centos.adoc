@@ -1,2 +1,65 @@
 == Instalación de CentOS [[centos_installation]]
 
+Describiremos a continuación como realizar una instalación sencilla con CentOS Stream 8.
+
+Al arrancar la máquina virtual seleccionaremos **Install CentOS Stream 8-stream** para empezar la instalación:
+
+image::linux/01-linux-install.png[CentOS Install]
+
+A continuación seleccionaremos el lenguaje a utilizar durante el proceso de instalación. Por defecto haremos la instalación en Inglés. Podemos seleccionar Español o cualquier otro idioma para realizar la instalación:
+
+image::linux/02-linux-install.png[CentOS Install]
+
+A continuación nos aparecerán todas las secciones que podemos configurar. Aquellas que aparecen con un indicador en naranja y con un signo de exclamación requieren de configuración. El resto se encuentran ya con unos valores preconfigurados que podremos cambiarlos según nuestras necesidades.
+
+image::linux/03-linux-install.png[CentOS Install]
+
+Si seleccionamos **Keyboard Layout** configuraremos el teclado. Añadimos **Español** y los desplazamos al primer lugar. Si deseamos añadir otros teclados podemos hacerlo:
+
+image::linux/04-linux-install.png[CentOS Install]
+
+Una ver terminada la configuración del teclado pinchamos en **Done** y volveremos al menú principal. Seleccionamos **Time & Date**:
+
+image::linux/05-linux-install.png[CentOS Install]
+
+Configuramos la zona horaria donde se encuentra la máquina y, de ser necesario podemos configurar la fecha también. Al terminar de configurar pulsamos en **Done**. Seleccionamos **Software Selection** y seleccionamos **Minimal Install**:
+
+image::linux/06-linux-install.png[CentOS Install]
+
+Confirmamos pinchando en **Done** y seleccionamos **Instalation Destination** dejando la configuración por defecto. Es posible realizar un particionamiento personalizado si lo consideramos oportuno:
+
+image::linux/07-linux-install.png[CentOS Install]
+
+Confirmamos pinchando en **Done** y seleccionamos **Network & Hostname**. Activamos el interface de red, si existe un servidor DHCP en la red local se le asignará una dirección IP. De no existir o querer asignar un direccionamiento estático lo podemos hacer pinchando en **Configure**.
+
+Si deseamos configurar el nombre de la máquina virtual podemos configurarlo y al pinchar en **Apply** se configurará:
+
+image::linux/08-linux-install.png[CentOS Install]
+
+Una vez terminada la configuración confirmamos en **Done** y seleccionamos **Root Password** en el menú principal.
+
+image::linux/09-linux-install.png[CentOS Install]
+
+Configuramos la password del usuario **root**. Si la contraseña es débil se nos indicará, pudiendo cambiarla.
+
+Confirmamos pinchando dos veces en **Done**. En el menú principal, debajo de la configuración de la password del usuario **root** pinchamos en **Create User** y configuramos un usuario no administrador:
+
+image::linux/10-linux-install.png[CentOS Install]
+
+Confirmamos pinchando en **Done** y comenzará la instalación:
+
+image::linux/11-linux-install.png[CentOS Install]
+
+Cuando termine la instalación pinchando en **Reboot** la máquina virtual se reiniciará y ya estará disponible para trabajar con ella:
+
+image::linux/12-linux-install.png[CentOS Install]
+
+Una vez reiniciada la máquina virtual podemos iniciar sesión en ella utilizando la consola virtual:
+
+image::linux/13-linux-install.png[CentOS Install]
+
+Si no anotamos la dirección IP podemos verla:
+
+image::linux/14-linux-install.png[CentOS Install]
+
+Una vez que tenemos la dirección IP será posible conectarse a la máquina virtual utilizando SSH.
