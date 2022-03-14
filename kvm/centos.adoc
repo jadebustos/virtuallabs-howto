@@ -46,3 +46,5 @@ NOTE: Aunque es posible crear máquinas virtuales dentro de una máquina virtual
 Si vamos a la sección **Virtual Machines** podremos empezar a crear máquinas virtuales:
 
 image::linux/centos-cockpit-vms-01.png[CentOS Cockpit VMs]
+
+Puedes ver como crear una máquina virtual con <<cockpit>>.

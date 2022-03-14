@@ -1,1 +1,1 @@
-=== Creando máquinas virtuales con Cockpit
+=== Creando máquinas virtuales con Cockpit [[cockpit]]
