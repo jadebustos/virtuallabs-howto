@@ -1,5 +1,5 @@
 === Creando máquinas virtuales con Cockpit [[cockpit]]
 
-En este tutorial explicaremos el uso básico para la creación de máquinas virtuales con KVM utilizando Cockpit. Asumiremos que crearemos las máquinas virtuales en el mismo portátil o equipo de sobremesa sobre el que estamos trabajando.
+En este apartado explicaremos el uso básico para la creación de máquinas virtuales con KVM utilizando Cockpit. Asumiremos que crearemos las máquinas virtuales en el mismo portátil o equipo de sobremesa sobre el que estamos trabajando.
 
 Para el acceso a las máquinas virtuales desde otros equipos en la red será necesario realizar una serie de configuraciones adicionales. Las máquinas virtuales que creemos serán accesibles desde nuestro propio ordenador.

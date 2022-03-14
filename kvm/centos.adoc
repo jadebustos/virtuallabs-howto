@@ -1,5 +1,7 @@
 === Creación de máquinas virtuales en CentOS
 
+El procedimiento que vamos a seguir aquí para CentOS Stream 8 debería poder ser utilizado en todas las distribuciones de la familia Red Hat con pocos o ningún cambio.
+
 Una vez activadas las extensiones de virtualización será necesario instalar el software que se encarga de la virtualización:
 
 * **KVM**, son la extensiones del kernel que permiten crear las máquinas virtuales.
