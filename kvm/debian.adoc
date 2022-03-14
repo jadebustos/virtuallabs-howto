@@ -49,4 +49,4 @@ Si vamos a la sección **Virtual Machines** podremos empezar a crear máquinas v
 
 image::linux/debian-cockpit-vms-01.png[Debian Cockpit VMs]
 
-Puedes ver como crear una máquina virtual con <<cockpit>>.
+Puedes ver como crear una máquina virtual en la sección <<cockpit>>.

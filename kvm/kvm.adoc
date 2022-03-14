@@ -88,10 +88,6 @@ NOTE: En equipos con procesadores AMD será necesario que en la BIOS se encuentr
 
 Si tenemos instalado el comando __lscpu__ también podremos comprobarlo.
 
-En este tutorial explicaremos el uso básico para la creación de máquinas virtuales con KVM y asumiremos que crearemos las máquinas virtuales en el mismo portátil o equipo de sobremesa sobre el que estamos trabajando.
-
-Para el acceso a las máquinas virtuales desde otros equipos en la red será necesario realizar una serie de configuraciones adicionales. Las máquinas virtuales que creemos serán accesibles desde nuestro propio ordenador.
-
 include::centos.adoc[]
 
 include::debian.adoc[]
