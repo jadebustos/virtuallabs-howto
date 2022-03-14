@@ -2,7 +2,7 @@
 
 Linux incluye soporte nativo para virtualización con lo cual no es necesario instalar software de terceras partes para la creación de máquinas virtuales. Bastará con utilizar las funcionalidades nativas de Linux.
 
-NOTE: Será necesario que en el ordenador en el que queramos crear máquinas virtuales se activen las instrucciones de virtualización. Esta tarea se realiza accediendo a la BIOS del sistema. En equipos con procesadores Intel será necesario que en la BIOS se encuentre activada la funcionalidad **Intel VT**. Sin embargo, en equipos con procesadores AMD será necesario que en la BIOS se encuentre activada la funcionalidad **AMD-V**.
+NOTE: Será necesario que en el ordenador en el que queramos crear máquinas virtuales se activen las instrucciones de virtualización. Esta tarea se realiza accediendo a la BIOS del sistema. 
 
 === Comprobación de que las extensiones de virtualización se encuentran activas
 
@@ -41,7 +41,10 @@ power management:
 
 [jadebustos@archimedes ~]$
 ```
+
 Obtendremos varias salidas, una por cada procesador. Bastará con fijarnos en la sección **flags** de uno de ellos. Si encontramos **vmx** entre los flags tendremos activadas las extensiones de virtualización.
+
+NOTE: En equipos con procesadores Intel será necesario que en la BIOS se encuentre activada la funcionalidad **Intel VT**.
 
 En un procesador AMD:
 
@@ -81,8 +84,9 @@ power management: ts ttp tm 100mhzsteps hwpstate cpb eff_freq_ro acc_power [13]
 
 Obtendremos varias salidas, una por cada procesador. Bastará con fijarnos en la sección **flags** de uno de ellos. Si encontramos **svm** entre los flags tendremos activadas las extensiones de virtualización.
 
-NOTE: Si tenemos instalado el comando __lscpu__ también podremos comprobarlo.
+NOTE:  En equipos con procesadores AMD será necesario que en la BIOS se encuentre activada la funcionalidad **AMD-V**.
 
+Si tenemos instalado el comando __lscpu__ también podremos comprobarlo.
 
 === Creación de máquinas virtuales en CentOS
 

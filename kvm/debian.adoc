@@ -1,0 +1,17 @@
+=== Creación de máquinas virtuales en Debian
+
+Una vez activadas las extensiones de virtualización será necesario instalar el software que se encarga de la virtualización:
+
+* **KVM**, son la extensiones del kernel que permiten crear las máquinas virtuales.
+* **Libvirt**, es el demonio que se encarga de la gestión de las máquinas virtuales.
+
+Nos conviene tener actualizada la máquina a último nivel:
+
+```shell
+[root@debian ~]#
+[root@debian ~]#
+[root@debian ~]#
+[root@debian ~]#
+[root@debian ~]#
+[root@debian ~]#
+```
