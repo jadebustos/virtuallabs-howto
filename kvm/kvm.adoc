@@ -2,11 +2,7 @@
 
 Linux incluye soporte nativo para virtualización con lo cual no es necesario instalar software de terceras partes para la creación de máquinas virtuales. Bastará con utilizar las funcionalidades nativas de Linux.
 
-NOTE: Será necesario que en el ordenador en el que queramos crear máquinas virtuales se activen las instrucciones de virtualización. Esta tarea se realiza accediendo a la BIOS del sistema.
-
-NOTE: En equipos con procesadores Intel será necesario que en la BIOS se encuentre activada la funcionalidad **Intel VT**.
-
-NOTE: En equipos con procesadores AMD será necesario que en la BIOS se encuentre activada la funcionalidad **AMD-V**.
+NOTE: Será necesario que en el ordenador en el que queramos crear máquinas virtuales se activen las instrucciones de virtualización. Esta tarea se realiza accediendo a la BIOS del sistema. En equipos con procesadores Intel será necesario que en la BIOS se encuentre activada la funcionalidad **Intel VT**. Sin embargo, en equipos con procesadores AMD será necesario que en la BIOS se encuentre activada la funcionalidad **AMD-V**.
 
 === Comprobación de que las extensiones de virtualización se encuentran activas
 
@@ -85,10 +81,40 @@ power management: ts ttp tm 100mhzsteps hwpstate cpb eff_freq_ro acc_power [13]
 
 Obtendremos varias salidas, una por cada procesador. Bastará con fijarnos en la sección **flags** de uno de ellos. Si encontramos **svm** entre los flags tendremos activadas las extensiones de virtualización.
 
+NOTE: Si tenemos instalado el comando __lscpu__ también podremos comprobarlo.
+
+
 === Creación de máquinas virtuales en CentOS
 
 Una vez activadas las extensiones de virtualización será necesario instalar el software que se encarga de la virtualización:
 
-* KVM, son la extensiones del kernel que permiten crear las máquinas virtuales.
-* Libvirt, es el demonio que se encarga de la gestión de las máquinas virtuales.
+* **KVM**, son la extensiones del kernel que permiten crear las máquinas virtuales.
+* **Libvirt**, es el demonio que se encarga de la gestión de las máquinas virtuales.
+
+Nos conviene tener actualizada la máquina a último nivel:
+
+```shell
+[root@centos8 ~]# dnf update -y
+...
+[root@centos8 ~]# dnf install @virt -y
+...
+[root@centos8 ~]# dnf install libvirt-devel virt-top libguestfs-tools -y
+...
+[root@centos8 ~]# systemctl enable --now libvirtd
+...
+[root@centos8 ~]#
+```
+
+Para poder crear máquinas virtuales de forma sencilla utilizaremos **cockpit**. Por defecto se encontrará instalado:
+
+```shell
+[root@centos8 ~]# dnf install cockpit cockpit-machines -y
+...
+[root@centos8 ~]# firewalld --permanent --add-service=cockpit
+[root@centos8 ~]# firewall --reload
+````
+
+Ahora para acceder a cockit podemos utilizar un navegador, bien desde el mismo equipo donde se encuentra instalado como desde cualquier otro atacando la ip del equipo:
+
+
 
