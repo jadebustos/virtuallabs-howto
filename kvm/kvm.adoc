@@ -1,3 +1,89 @@
 == KVM
 
 Linux incluye soporte nativo para virtualización con lo cual no es necesario instalar software de terceras partes para la creación de máquinas virtuales. Bastará con utilizar las funcionalidades nativas de Linux.
+
+NOTE: Será necesario que en el ordenador en el que queramos crear máquinas virtuales se activen las instrucciones de virtualización. Esta tarea se realiza accediendo a la BIOS del sistema.
+
+NOTE: En equipos con procesadores Intel será necesario que en la BIOS se encuentre activada la funcionalidad **Intel VT**.
+
+NOTE: En equipos con procesadores AMD será necesario que en la BIOS se encuentre activada la funcionalidad **AMD-V**.
+
+=== Comprobación de que las extensiones de virtualización se encuentran activas
+
+En un ordenador con procesador **Intel** podemos comprobarlo de la siguiente forma:
+
+```shell
+[jadebustos@archimedes ~]$ cat /proc/cpuinfo
+...
+processor	: 7
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 142
+model name	: Intel(R) Core(TM) i7-8665U CPU @ 1.90GHz
+stepping	: 12
+microcode	: 0xec
+cpu MHz		: 2100.000
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 3
+cpu cores	: 4
+apicid		: 7
+initial apicid	: 7
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple shadow_vmcs pml ept_mode_based_exec
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs taa itlb_multihit srbds
+bogomips	: 4199.88
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+[jadebustos@archimedes ~]$
+````
+Obtendremos varias salidas, una por cada procesador. Bastará con fijarnos en la sección **flags** de uno de ellos. Si encontramos **vmx** entre los flags tendremos activadas las extensiones de virtualización.
+
+En un procesador AMD:
+
+```shell
+[jadebustos@beast ~]$ cat /proc/cpuinfo
+...
+processor	: 1
+vendor_id	: AuthenticAMD
+cpu family	: 21
+model		: 96
+model name	: AMD Opteron(tm) X3216 APU
+stepping	: 1
+microcode	: 0x6006118
+cpu MHz		: 2852.875
+cache size	: 1024 KB
+physical id	: 0
+siblings	: 2
+core id		: 1
+cpu cores	: 1
+apicid		: 17
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good acc_power nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs xop skinit wdt lwp fma4 tce nodeid_msr tbm topoext perfctr_core perfctr_nb bpext ptsc mwaitx cpb hw_pstate ssbd vmmcall fsgsbase bmi1 avx2 smep bmi2 xsaveopt arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif overflow_recov
+bugs		: fxsave_leak sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 3194.10
+TLB size	: 1536 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm 100mhzsteps hwpstate cpb eff_freq_ro acc_power [13]
+
+[jadebustos@beast ~]$ 
+```
+
+Obtendremos varias salidas, una por cada procesador. Bastará con fijarnos en la sección **flags** de uno de ellos. Si encontramos **svm** entre los flags tendremos activadas las extensiones de virtualización.
+
+=== Creación de máquinas virtuales en CentOS
+

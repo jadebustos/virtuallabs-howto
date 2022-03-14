@@ -146,7 +146,7 @@ Si hemos configurado adecuadamente la red la máquina virtual tendrá asignada u
 
 image::virtualbox/04-virtualbox-install.png[VirtualBox Linux Installation]
 
-Cuando trabajemos utilizando la consola de VirtualBox el cursor se encontrará ``encerrado'' en la cosola y podrá ser utilizado fuera de la consola. Para liberarlo, en Mac OS X, bastará con presionar la tecla de comando izquierda, tal y como se indica en la parte inferior derecha de la consola:
+Cuando trabajemos utilizando la consola de VirtualBox el cursor se encontrará "encerrado" en la cosola y podrá ser utilizado fuera de la consola. Para liberarlo, en Mac OS X, bastará con presionar la tecla de comando izquierda, tal y como se indica en la parte inferior derecha de la consola:
 
 image::virtualbox/01-virtualbox-cursor.png[VirtualBox Cursor]
 
