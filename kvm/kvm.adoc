@@ -44,7 +44,7 @@ address sizes	: 39 bits physical, 48 bits virtual
 power management:
 
 [jadebustos@archimedes ~]$
-````
+```
 Obtendremos varias salidas, una por cada procesador. Bastará con fijarnos en la sección **flags** de uno de ellos. Si encontramos **vmx** entre los flags tendremos activadas las extensiones de virtualización.
 
 En un procesador AMD:
@@ -86,4 +86,9 @@ power management: ts ttp tm 100mhzsteps hwpstate cpb eff_freq_ro acc_power [13]
 Obtendremos varias salidas, una por cada procesador. Bastará con fijarnos en la sección **flags** de uno de ellos. Si encontramos **svm** entre los flags tendremos activadas las extensiones de virtualización.
 
 === Creación de máquinas virtuales en CentOS
+
+Una vez activadas las extensiones de virtualización será necesario instalar el software que se encarga de la virtualización:
+
+* KVM, son la extensiones del kernel que permiten crear las máquinas virtuales.
+* Libvirt, es el demonio que se encarga de la gestión de las máquinas virtuales.
 
