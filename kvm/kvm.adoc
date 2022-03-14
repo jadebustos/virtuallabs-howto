@@ -95,3 +95,5 @@ Para el acceso a las máquinas virtuales desde otros equipos en la red será nec
 include::centos.adoc[]
 
 include::debian.adoc[]
+
+include::cockpit.adoc[]
