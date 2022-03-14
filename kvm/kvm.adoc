@@ -84,7 +84,7 @@ power management: ts ttp tm 100mhzsteps hwpstate cpb eff_freq_ro acc_power [13]
 
 Obtendremos varias salidas, una por cada procesador. Bastará con fijarnos en la sección **flags** de uno de ellos. Si encontramos **svm** entre los flags tendremos activadas las extensiones de virtualización.
 
-NOTE:  En equipos con procesadores AMD será necesario que en la BIOS se encuentre activada la funcionalidad **AMD-V**.
+NOTE: En equipos con procesadores AMD será necesario que en la BIOS se encuentre activada la funcionalidad **AMD-V**.
 
 Si tenemos instalado el comando __lscpu__ también podremos comprobarlo.
 
@@ -109,16 +109,27 @@ Nos conviene tener actualizada la máquina a último nivel:
 [root@centos8 ~]#
 ```
 
-Para poder crear máquinas virtuales de forma sencilla utilizaremos **cockpit**. Por defecto se encontrará instalado:
+Para poder crear máquinas virtuales de forma sencilla utilizaremos **cockpit**:
 
 ```shell
 [root@centos8 ~]# dnf install cockpit cockpit-machines -y
 ...
 [root@centos8 ~]# firewalld --permanent --add-service=cockpit
 [root@centos8 ~]# firewall --reload
-````
+[root@centos8 ~]# systemctl enable --now cockpit.socket
+...
+[root@centos8 ~]#
+```
 
 Ahora para acceder a cockit podemos utilizar un navegador, bien desde el mismo equipo donde se encuentra instalado como desde cualquier otro atacando la ip del equipo:
+
+NOTE: Nos conectaremos al puerto **9090** utilizando el protocolo **HTTPS**.
+
+image::linux/centos-cockpit-login-1.png[CentOS Cockpit login]
+
+Para iniciar sesión utilizaremos el usuario **root**:
+
+image::linux/centos-cockpit-login-2.png[CentOS Cockpit login]
 
 
 
