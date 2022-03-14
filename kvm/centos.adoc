@@ -1,0 +1,50 @@
+=== Creación de máquinas virtuales en CentOS
+
+Una vez activadas las extensiones de virtualización será necesario instalar el software que se encarga de la virtualización:
+
+* **KVM**, son la extensiones del kernel que permiten crear las máquinas virtuales.
+* **Libvirt**, es el demonio que se encarga de la gestión de las máquinas virtuales.
+
+Nos conviene tener actualizada la máquina a último nivel:
+
+```shell
+[root@centos8 ~]# dnf update -y
+...
+[root@centos8 ~]# dnf install @virt -y
+...
+[root@centos8 ~]# dnf install libvirt-devel virt-top libguestfs-tools -y
+...
+[root@centos8 ~]# systemctl enable --now libvirtd
+...
+[root@centos8 ~]#
+```
+
+Para poder crear máquinas virtuales de forma sencilla utilizaremos **cockpit**:
+
+```shell
+[root@centos8 ~]# dnf install cockpit cockpit-machines -y
+...
+[root@centos8 ~]# firewalld --permanent --add-service=cockpit
+[root@centos8 ~]# firewall --reload
+[root@centos8 ~]# systemctl enable --now cockpit.socket
+...
+[root@centos8 ~]#
+```
+
+Ahora para acceder a cockit podemos utilizar un navegador, bien desde el mismo equipo donde se encuentra instalado como desde cualquier otro atacando la ip del equipo:
+
+NOTE: Nos conectaremos al puerto **9090** utilizando el protocolo **HTTPS**.
+
+image::linux/centos-cockpit-login-1.png[CentOS Cockpit login]
+
+Para iniciar sesión utilizaremos el usuario **root**:
+
+image::linux/centos-cockpit-login-2.png[CentOS Cockpit login]
+
+NOTE: Aunque es posible crear máquinas virtuales dentro de una máquina virtual utilizando **nested virtualization** asumiremos que utilizaremos una máquina física. Los siguientes pasos tendrán lugar en máquinas físicas.
+
+Si vamos a la sección **Virtual Machines** podremos empezar a crear máquinas virtuales:
+
+image::linux/centos-cockpit-vms-01.png[CentOS Cockpit VMs]
+
+include::debian.adoc[]
