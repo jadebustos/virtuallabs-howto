@@ -8,9 +8,12 @@ Una vez activadas las extensiones de virtualización será necesario instalar el
 Nos conviene tener actualizada la máquina a último nivel:
 
 ```shell
-[root@debian ~]#
-[root@debian ~]#
-[root@debian ~]#
+[root@debian ~]# apt update -y
+...
+[root@debian ~]# apt upgrade -y
+...
+[root@debian ~]# apt install install qemu-system libvirt-clients libvirt-daemon-system
+...
 [root@debian ~]#
 [root@debian ~]#
 [root@debian ~]#
