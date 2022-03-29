@@ -3,3 +3,27 @@
 En este apartado explicaremos el uso básico para la creación de máquinas virtuales con KVM utilizando Cockpit. Asumiremos que crearemos las máquinas virtuales en el mismo portátil o equipo de sobremesa sobre el que estamos trabajando.
 
 Para el acceso a las máquinas virtuales desde otros equipos en la red será necesario realizar una serie de configuraciones adicionales. Las máquinas virtuales que creemos serán accesibles desde nuestro propio ordenador.
+
+Nos conectamos a nuestro ordenador utilizando un navegador al puerto 9090:
+
+image::cockpit/01-cockpit.png[]
+
+Iniciamos sesión con el usuario **root**:
+
+image::cockpit/02-cockpit.png[]
+
+Vamos al apartado **Virtual Machines**:
+
+image::cockpit/03-cockpit.png[]
+
+Pinchamos en **Crear una MV** y rellenamos el formulario. Deberemos tener una iso en el disco local para realizar la instalación:
+
+image::cockpit/04-cockpit.png[]
+
+Se crea la VM. Pinchamos en el nombre de la VM:
+
+image::cockpit/05-cockpit.png[]
+
+En la parte de la consola, pinchamos y realizamos la instalación tal y como se ve en <<instalacioncentos>>:
+
+image::cockpit/06-cockpit.png[]

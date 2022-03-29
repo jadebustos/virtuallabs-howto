@@ -21,6 +21,23 @@ Nos conviene tener actualizada la máquina a último nivel:
 [root@debian ~]#
 ```
 
+Vamos a asegurarnos que la red que se crea por defecto para las máquinas virtuales se encuentra operativa:
+
+```shell
+[root@debian ~]# virsh net-autostart default
+La red default ha sido marcada para iniciarse automáticamente
+
+[root@debian ~]# virsh net-start default
+La red default se ha iniciado
+
+[root@debian ~]# virsh net-list
+ Nombre    Estado   Inicio automático   Persistente
+-----------------------------------------------------
+ default   activo   si                  si
+
+[root@debian ~]#
+```
+
 Para poder crear máquinas virtuales de forma sencilla utilizaremos **cockpit**:
 
 ```shell
